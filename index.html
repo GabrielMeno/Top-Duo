@@ -115,7 +115,7 @@
     <script type="text/babel">
         const { useState, useEffect, useRef, createContext, useContext } = React;
 
-        // --- CONTEXTO DE TOAST (Para substituir alerts) ---
+        // --- CONTEXTO DE TOAST ---
         const ToastContext = createContext();
 
         const ToastProvider = ({ children }) => {
@@ -568,7 +568,7 @@
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                             
                             {/* NCM - CARD MELHORADO */}
-                            <RevealOnScroll className="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg flex flex-col min-h-[320px] hover:border-sky-500/50 transition-colors justify-between">
+                            <RevealOnScroll className="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg flex flex-col min-h-[420px] hover:border-sky-500/50 transition-colors justify-between">
                                 <div>
                                     <div className="flex items-center gap-3 mb-6">
                                         <div className="p-3 bg-teal-100 dark:bg-teal-900/30 rounded-xl text-teal-600 dark:text-teal-400 shadow-sm"><Icon name="Package" size={28} /></div>
@@ -595,7 +595,7 @@
                             </RevealOnScroll>
 
                             {/* CNPJ - CARD MELHORADO */}
-                            <RevealOnScroll className="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg flex flex-col min-h-[320px] hover:border-sky-500/50 transition-colors justify-between">
+                            <RevealOnScroll className="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg flex flex-col min-h-[420px] hover:border-sky-500/50 transition-colors justify-between">
                                 <div>
                                     <div className="flex items-center gap-3 mb-6">
                                         <div className="p-3 bg-purple-100 dark:bg-purple-900/30 rounded-xl text-purple-600 dark:text-purple-400 shadow-sm"><Icon name="Building" size={28} /></div>
@@ -622,7 +622,7 @@
                             </RevealOnScroll>
 
                             {/* QR CODE - CARD MELHORADO */}
-                            <RevealOnScroll className="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg flex flex-col min-h-[320px] hover:border-sky-500/50 transition-colors justify-between">
+                            <RevealOnScroll className="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg flex flex-col min-h-[420px] hover:border-sky-500/50 transition-colors justify-between">
                                 <div>
                                     <div className="flex items-center gap-3 mb-6">
                                         <div className="p-3 bg-pink-100 dark:bg-pink-900/30 rounded-xl text-pink-600 dark:text-pink-400 shadow-sm"><Icon name="QrCode" size={28} /></div>
@@ -650,7 +650,7 @@
                             </RevealOnScroll>
 
                             {/* SENHA - CARD MELHORADO */}
-                            <RevealOnScroll className="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg flex flex-col min-h-[320px] hover:border-sky-500/50 transition-colors justify-between">
+                            <RevealOnScroll className="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-lg flex flex-col min-h-[420px] hover:border-sky-500/50 transition-colors justify-between">
                                 <div>
                                     <div className="flex items-center gap-3 mb-6">
                                         <div className="p-3 bg-orange-100 dark:bg-orange-900/30 rounded-xl text-orange-600 dark:text-orange-400 shadow-sm"><Icon name="Lock" size={28} /></div>
@@ -678,24 +678,24 @@
                         </div>
 
                         {/* GRID DE ATALHOS E INFORMAÇÕES (PEQUENOS) */}
-                        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                        <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-4 gap-6">
                             
                             {/* CLIMA */}
-                            <RevealOnScroll className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md flex flex-col items-center justify-center text-center hover:border-sky-400 transition-all group">
+                            <RevealOnScroll className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md flex flex-col items-center justify-center text-center min-h-[200px] hover:border-sky-400 transition-all group">
                                 <div className="text-sky-500 mb-2 group-hover:scale-110 transition-transform"><Icon name={weather ? getWeatherIcon(weather.code) : 'Cloud'} size={28} /></div>
                                 <h4 className="text-sm font-bold text-slate-700 dark:text-slate-300">Clima</h4>
                                 <p className="text-lg font-bold text-slate-900 dark:text-white">{weather ? `${weather.temp}°C` : '...'}</p>
                             </RevealOnScroll>
 
                             {/* SISTEMA */}
-                            <RevealOnScroll className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md flex flex-col items-center justify-center text-center hover:border-green-400 transition-all group">
+                            <RevealOnScroll className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md flex flex-col items-center justify-center text-center min-h-[200px] hover:border-green-400 transition-all group">
                                 <div className="text-green-500 mb-2 group-hover:scale-110 transition-transform"><Icon name="Monitor" size={28} /></div>
                                 <h4 className="text-sm font-bold text-slate-700 dark:text-slate-300">Seu IP</h4>
                                 <p className="text-xs font-mono text-slate-500 dark:text-slate-400 truncate w-full px-2">{systemInfo.ip}</p>
                             </RevealOnScroll>
 
                             {/* LATÊNCIA */}
-                            <RevealOnScroll className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md flex flex-col items-center justify-center text-center hover:border-blue-400 transition-all group cursor-pointer" onClick={testLatency}>
+                            <RevealOnScroll className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md flex flex-col items-center justify-center text-center min-h-[200px] hover:border-blue-400 transition-all group cursor-pointer" onClick={testLatency}>
                                 <div className="text-blue-500 mb-2 group-hover:scale-110 transition-transform"><Icon name="Activity" size={28} /></div>
                                 <h4 className="text-sm font-bold text-slate-700 dark:text-slate-300">Latência</h4>
                                 <p className={`text-lg font-bold ${isTestingLatency ? 'animate-pulse' : ''} ${latency === 'Erro' ? 'text-red-500' : 'text-slate-900 dark:text-white'}`}>
@@ -704,35 +704,35 @@
                             </RevealOnScroll>
 
                             {/* SEFAZ */}
-                            <a href="https://www.nfe.fazenda.gov.br/portal/disponibilidade.aspx" target="_blank" className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md flex flex-col items-center justify-center text-center hover:border-red-400 transition-all group">
+                            <a href="https://www.nfe.fazenda.gov.br/portal/disponibilidade.aspx" target="_blank" className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md flex flex-col items-center justify-center text-center min-h-[200px] hover:border-red-400 transition-all group">
                                 <div className="text-red-500 mb-2 group-hover:scale-110 transition-transform"><Icon name="Server" size={28} /></div>
                                 <h4 className="text-sm font-bold text-slate-700 dark:text-slate-300">Status SEFAZ</h4>
                                 <span className="text-xs text-slate-400 group-hover:text-red-500 flex items-center gap-1 mt-1">Acessar <Icon name="ExternalLink" size={10} /></span>
                             </a>
 
                             {/* NFC-E STATUS */}
-                            <a href="https://monitor.tecnospeed.com.br/?&filter-uf=sc&filter-doc=nfce" target="_blank" className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md flex flex-col items-center justify-center text-center hover:border-emerald-400 transition-all group">
+                            <a href="https://monitor.tecnospeed.com.br/?&filter-uf=sc&filter-doc=nfce" target="_blank" className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md flex flex-col items-center justify-center text-center min-h-[200px] hover:border-emerald-400 transition-all group">
                                 <div className="text-emerald-500 mb-2 group-hover:scale-110 transition-transform"><Icon name="FileText" size={28} /></div>
                                 <h4 className="text-sm font-bold text-slate-700 dark:text-slate-300">Status NFC-e</h4>
                                 <span className="text-xs text-slate-400 group-hover:text-emerald-500 flex items-center gap-1 mt-1">Verificar <Icon name="ExternalLink" size={10} /></span>
                             </a>
 
                             {/* SINTEGRA */}
-                            <a href="http://www.sintegra.gov.br" target="_blank" className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md flex flex-col items-center justify-center text-center hover:border-indigo-400 transition-all group">
+                            <a href="http://www.sintegra.gov.br" target="_blank" className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md flex flex-col items-center justify-center text-center min-h-[200px] hover:border-indigo-400 transition-all group">
                                 <div className="text-indigo-500 mb-2 group-hover:scale-110 transition-transform"><Icon name="Globe" size={28} /></div>
                                 <h4 className="text-sm font-bold text-slate-700 dark:text-slate-300">SINTEGRA</h4>
                                 <span className="text-xs text-slate-400 group-hover:text-indigo-500 flex items-center gap-1 mt-1">Consultar <Icon name="ExternalLink" size={10} /></span>
                             </a>
 
                             {/* CONSULTA NF-E */}
-                            <a href="https://www.nfe.fazenda.gov.br/portal/consultaRecaptcha.aspx?tipoConsulta=resumo&tipoConteudo=7PhJ+gAVw2g=" target="_blank" className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md flex flex-col items-center justify-center text-center hover:border-cyan-400 transition-all group">
+                            <a href="https://www.nfe.fazenda.gov.br/portal/consultaRecaptcha.aspx?tipoConsulta=resumo&tipoConteudo=7PhJ+gAVw2g=" target="_blank" className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md flex flex-col items-center justify-center text-center min-h-[200px] hover:border-cyan-400 transition-all group">
                                 <div className="text-cyan-500 mb-2 group-hover:scale-110 transition-transform"><Icon name="File" size={28} /></div>
                                 <h4 className="text-sm font-bold text-slate-700 dark:text-slate-300">Consultar NF-e</h4>
                                 <span className="text-xs text-slate-400 group-hover:text-cyan-500 flex items-center gap-1 mt-1">Portal <Icon name="ExternalLink" size={10} /></span>
                             </a>
 
                             {/* CONSULTA NFC-E SC */}
-                            <a href="https://sat.sef.sc.gov.br/tax.NET/Sat.Dfe.NFCe.Web/Consultas/ConsultaPublicaNFCe.aspx" target="_blank" className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md flex flex-col items-center justify-center text-center hover:border-lime-400 transition-all group">
+                            <a href="https://sat.sef.sc.gov.br/tax.NET/Sat.Dfe.NFCe.Web/Consultas/ConsultaPublicaNFCe.aspx" target="_blank" className="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md flex flex-col items-center justify-center text-center min-h-[200px] hover:border-lime-400 transition-all group">
                                 <div className="text-lime-500 mb-2 group-hover:scale-110 transition-transform"><Icon name="FileText" size={28} /></div>
                                 <h4 className="text-sm font-bold text-slate-700 dark:text-slate-300">NFC-e (SC)</h4>
                                 <span className="text-xs text-slate-400 group-hover:text-lime-500 flex items-center gap-1 mt-1">SAT <Icon name="ExternalLink" size={10} /></span>
