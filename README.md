@@ -76,7 +76,7 @@ A página foi projetada para apresentar a Top Duo Informática de forma clara e 
 
 ## 📞 Contato
 
-- **Telefone:** (49) 3346-0000
+- **Telefone:** (49) 3346-3678
 - **E-mail:** topduoinformatica@gmail.com
 - **Instagram:** @topduoinformatica
 
